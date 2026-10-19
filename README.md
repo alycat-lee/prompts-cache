@@ -22,10 +22,7 @@ prompts-cache 是一个 Chrome MV3 扩展。它不依赖云端、不注册账号
 - **零网络请求**：无后端、无遥测、无第三方脚本。
 
 ## 截图
-
-> 待确认：将截图放到 `docs/screenshot.png` 后，下面的图片才会显示。
-
-![prompts-cache 侧边栏截图](docs/screenshot.png)
+<img src="docs/screenshot.png" alt="prompts-cache 侧边栏截图" width="300" height="400">
 
 ## 安装（开发者模式）
 
