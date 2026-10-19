@@ -1,0 +1,293 @@
+:root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #111827;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --accent: #2563eb;
+    --accent-fg: #ffffff;
+    --card: #ffffff;
+    --hover: #f3f4f6;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111827;
+      --fg: #f9fafb;
+      --muted: #9ca3af;
+      --border: #374151;
+      --accent: #3b82f6;
+      --card: #1f2937;
+      --hover: #374151;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    color: var(--fg);
+    font: 13px/1.5 system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  }
+  
+  .topbar {
+    display: flex;
+    gap: 6px;
+    padding: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .topbar input {
+    flex: 1;
+    min-width: 0;
+    padding: 6px 8px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--fg);
+    font: inherit;
+  }
+  
+  button {
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--fg);
+    font: inherit;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: var(--hover);
+  }
+  
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .filters select {
+    padding: 5px 6px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--fg);
+    font: inherit;
+  }
+  
+  .tagbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .chip {
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg);
+    color: var(--fg);
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .chip.on {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-fg);
+  }
+  
+  .list {
+    flex: 1;
+    overflow: auto;
+    padding: 8px;
+  }
+  
+  .card {
+    margin-bottom: 8px;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card);
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    border-color: var(--accent);
+  }
+  
+  .card h3 {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+  
+  .card .sub {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: 11px;
+    word-break: break-all;
+  }
+  
+  .card .filename {
+    color: var(--muted);
+  }
+  
+  .card .category {
+    padding: 0 6px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 10px;
+    line-height: 16px;
+    color: var(--fg);
+  }
+  
+  .card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 6px;
+  }
+  
+  .card .tag {
+    padding: 0 7px;
+    border-radius: 999px;
+    background: var(--hover);
+    color: var(--fg);
+    font-size: 10px;
+    line-height: 18px;
+  }
+  
+  .card .ops {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  
+  .card .ops button {
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+  
+  .empty {
+    padding: 24px 8px;
+    color: var(--muted);
+    text-align: center;
+  }
+  
+  .status {
+    min-height: 20px;
+    padding: 4px 10px;
+    border-top: 1px solid var(--border);
+    color: #059669;
+    font-size: 12px;
+  }
+  
+  .status.error {
+    color: #dc2626;
+  }
+  
+  .setup {
+    padding: 24px 16px;
+    text-align: center;
+  }
+  
+  .setup p {
+    color: var(--muted);
+  }
+  
+  dialog {
+    width: min(92vw, 420px);
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: var(--bg);
+    color: var(--fg);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  }
+  
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.35);
+  }
+  
+  dialog label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  
+  dialog input,
+  dialog textarea {
+    width: 100%;
+    margin-top: 3px;
+    padding: 6px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--fg);
+    font: inherit;
+  }
+  
+  dialog textarea {
+    resize: vertical;
+  }
+  
+  .dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .copy-hint {
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  
+  #copy-vars {
+    max-height: 50vh;
+    overflow: auto;
+    margin-bottom: 10px;
+  }
+  
+  #copy-vars label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    color: var(--fg);
+    font-size: 12px;
+  }
+  
+  #copy-vars label span {
+    min-width: 80px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--muted);
+    word-break: break-all;
+  }
+  
+  #copy-vars label input {
+    flex: 1;
+    min-width: 0;
+  }

@@ -1,0 +1,87 @@
+{
+    "extName": { "message": "prompts-cache" },
+    "extDescription": { "message": "Local prompt cache: search, tag, categorize, create/edit/delete, one-click copy." },
+    "actionTitle": { "message": "Open prompts-cache" },
+    "searchPlaceholder": { "message": "Search name, filename, tag, category, content" },
+    "btnNewTitle": { "message": "New prompt" },
+    "btnRefreshTitle": { "message": "Rescan folder" },
+    "categoryAll": { "message": "All categories" },
+    "tagAll": { "message": "All" },
+    "emptyList": { "message": "No matching prompts" },
+    "setupFirst": { "message": "First use: choose a local folder to store .md files and the .prompts-cache.json index." },
+    "setupReauth": { "message": "Re-authorization required for this folder. Click the button below to continue." },
+    "btnPickFolder": { "message": "Choose prompt folder" },
+    "labelName": { "message": "Name" },
+    "labelTags": { "message": "Tags" },
+    "labelTagsPlaceholder": { "message": "Comma separated, e.g. dev, review" },
+    "labelCategory": { "message": "Category" },
+    "labelCategoryPlaceholder": { "message": "e.g. Engineering" },
+    "labelContent": { "message": "Content" },
+    "btnCancel": { "message": "Cancel" },
+    "btnSave": { "message": "Save" },
+    "btnCopy": { "message": "Copy" },
+    "btnEdit": { "message": "Edit" },
+    "btnDelete": { "message": "Delete" },
+    "confirmDelete": {
+      "message": "Delete $FILENAME$? This removes the local file.",
+      "placeholders": { "filename": { "content": "$1", "example": "code-review.md" } }
+    },
+    "statusLoaded": {
+      "message": "Loaded $COUNT$ prompt(s)",
+      "placeholders": { "count": { "content": "$1", "example": "12" } }
+    },
+    "statusCopied": {
+      "message": "Copied: $NAME$",
+      "placeholders": { "name": { "content": "$1", "example": "Code Review" } }
+    },
+    "statusCopyFailed": { "message": "Copy failed. Please select the text manually." },
+    "statusFolderConnected": { "message": "Folder connected" },
+    "statusRestored": { "message": "Folder access restored" },
+    "statusFolderFailed": {
+      "message": "Failed to connect folder: $ERROR$",
+      "placeholders": { "error": { "content": "$1" } }
+    },
+    "statusInitFailed": {
+      "message": "Initialization failed: $ERROR$",
+      "placeholders": { "error": { "content": "$1" } }
+    },
+    "statusRefreshFailed": {
+      "message": "Refresh failed: $ERROR$",
+      "placeholders": { "error": { "content": "$1" } }
+    },
+    "statusNameContentRequired": { "message": "Name and content are required" },
+    "statusFilenameInvalid": { "message": "Invalid filename: must not start with '.', must not contain \\ / : * ? \" < > |" },
+    "statusFileExists": {
+      "message": "File already exists: $FILENAME$",
+      "placeholders": { "filename": { "content": "$1" } }
+    },
+    "statusSaved": {
+      "message": "Saved: $FILENAME$",
+      "placeholders": { "filename": { "content": "$1" } }
+    },
+    "statusDeleted": {
+      "message": "Deleted: $FILENAME$",
+      "placeholders": { "filename": { "content": "$1" } }
+    },
+    "statusSaveFailed": {
+      "message": "Save failed: $ERROR$",
+      "placeholders": { "error": { "content": "$1" } }
+    },
+    "statusDeleteFailed": {
+      "message": "Delete failed: $ERROR$",
+      "placeholders": { "error": { "content": "$1" } }
+    },
+    
+        "btnImportIndexTitle": { "message": "Fill missing index entries for all .md files" },
+        "labelFilename": { "message": "Filename / relative path" },
+        "labelFilenamePlaceholder": { "message": "May include subdirectories, e.g. dev/code-review.md. Leave empty to auto-generate from name." },
+        "statusIndexed": {
+          "message": "Filled $COUNT$ index entries",
+          "placeholders": { "count": { "content": "$1", "example": "5" } }
+        },
+        "statusIndexedNone": { "message": "All .md files are already indexed" },
+        "copyVarsHint": { "message": "Variables detected. Fill them in before copying. Leave empty to keep {{var}} as-is." },
+        "btnCopyRaw": { "message": "Copy as-is" },
+        "btnCopyWithVars": { "message": "Fill and copy" }
+      }
+  

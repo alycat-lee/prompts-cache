@@ -1,0 +1,86 @@
+{
+    "extName": { "message": "prompts-cache" },
+    "extDescription": { "message": "本地 prompt 缓存：搜索、标签分类、新建/编辑/删除、一键复制。" },
+    "actionTitle": { "message": "打开 prompts-cache" },
+    "searchPlaceholder": { "message": "搜索名称、文件名、标签、分类、内容" },
+    "btnNewTitle": { "message": "新建 prompt" },
+    "btnRefreshTitle": { "message": "重新扫描" },
+    "categoryAll": { "message": "全部分类" },
+    "tagAll": { "message": "全部" },
+    "emptyList": { "message": "没有匹配的 prompt" },
+    "setupFirst": { "message": "首次使用：请选择一个本地文件夹，用来存放 .md 文件和 .prompts-cache.json 索引。" },
+    "setupReauth": { "message": "需要重新授权访问该文件夹。点击下方按钮继续。" },
+    "btnPickFolder": { "message": "选择 prompt 文件夹" },
+    "labelName": { "message": "名称" },
+    "labelTags": { "message": "标签" },
+    "labelTagsPlaceholder": { "message": "用逗号分隔，例如：开发, 审查" },
+    "labelCategory": { "message": "分类" },
+    "labelCategoryPlaceholder": { "message": "例如：工程" },
+    "labelContent": { "message": "内容" },
+    "btnCancel": { "message": "取消" },
+    "btnSave": { "message": "保存" },
+    "btnCopy": { "message": "复制" },
+    "btnEdit": { "message": "编辑" },
+    "btnDelete": { "message": "删除" },
+    "confirmDelete": {
+      "message": "确定删除 $FILENAME$？此操作会删除本地文件。",
+      "placeholders": { "filename": { "content": "$1", "example": "code-review.md" } }
+    },
+    "statusLoaded": {
+      "message": "已加载 $COUNT$ 条 prompt",
+      "placeholders": { "count": { "content": "$1", "example": "12" } }
+    },
+    "statusCopied": {
+      "message": "已复制：$NAME$",
+      "placeholders": { "name": { "content": "$1", "example": "代码审查" } }
+    },
+    "statusCopyFailed": { "message": "复制失败，请手动选择文本" },
+    "statusFolderConnected": { "message": "文件夹已连接" },
+    "statusRestored": { "message": "已恢复文件夹访问权限" },
+    "statusFolderFailed": {
+      "message": "连接文件夹失败：$ERROR$",
+      "placeholders": { "error": { "content": "$1" } }
+    },
+    "statusInitFailed": {
+      "message": "初始化失败：$ERROR$",
+      "placeholders": { "error": { "content": "$1" } }
+    },
+    "statusRefreshFailed": {
+      "message": "刷新失败：$ERROR$",
+      "placeholders": { "error": { "content": "$1" } }
+    },
+    "statusNameContentRequired": { "message": "名称和内容不能为空" },
+    "statusFilenameInvalid": { "message": "文件名不合法：不能以 . 开头，不能包含 \\ / : * ? \" < > |" },
+    "statusFileExists": {
+      "message": "文件已存在：$FILENAME$",
+      "placeholders": { "filename": { "content": "$1" } }
+    },
+    "statusSaved": {
+      "message": "已保存：$FILENAME$",
+      "placeholders": { "filename": { "content": "$1" } }
+    },
+    "statusDeleted": {
+      "message": "已删除：$FILENAME$",
+      "placeholders": { "filename": { "content": "$1" } }
+    },
+    "statusSaveFailed": {
+      "message": "保存失败：$ERROR$",
+      "placeholders": { "error": { "content": "$1" } }
+    },
+    "statusDeleteFailed": {
+      "message": "删除失败：$ERROR$",
+      "placeholders": { "error": { "content": "$1" } }
+    },
+  
+    "btnImportIndexTitle": { "message": "为所有 .md 文件补全索引条目" },
+    "labelFilename": { "message": "文件名 / 相对路径" },
+    "labelFilenamePlaceholder": { "message": "可含子目录，例如 开发/code-review.md；留空则根据名称自动生成" },
+    "statusIndexed": {
+      "message": "已补全 $COUNT$ 条索引",
+      "placeholders": { "count": { "content": "$1", "example": "5" } }
+    },
+    "statusIndexedNone": { "message": "所有 .md 均已在索引中" },
+    "copyVarsHint": { "message": "检测到变量占位，请填写后复制。留空则保留 {{变量}} 原文。" },
+    "btnCopyRaw": { "message": "原样复制" },
+    "btnCopyWithVars": { "message": "填充并复制" }
+  }

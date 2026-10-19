@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>prompts-cache</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <header class="topbar">
+    <input
+      id="search"
+      type="search"
+      data-i18n-placeholder="searchPlaceholder"
+      autocomplete="off"
+    >
+    <button id="btn-import" type="button" data-i18n-title="btnImportIndexTitle">⇣</button>
+    <button id="btn-new" type="button" data-i18n-title="btnNewTitle">＋</button>
+    <button id="btn-refresh" type="button" data-i18n-title="btnRefreshTitle">⟳</button>
+  </header>
+
+  <div class="filters">
+    <select id="category" data-i18n-title="categoryAll">
+      <option value="" data-i18n="categoryAll">全部分类</option>
+    </select>
+    <div id="tagbar" class="tagbar"></div>
+  </div>
+
+  <main id="list" class="list"></main>
+  <div id="status" class="status" role="status" aria-live="polite"></div>
+
+  <section id="setup" class="setup" hidden>
+    <p id="setup-msg"></p>
+    <button id="btn-pick" type="button" data-i18n="btnPickFolder">选择 prompt 文件夹</button>
+  </section>
+
+  <dialog id="editor">
+    <form id="editor-form">
+      <label>
+        <span data-i18n="labelName">名称</span>
+        <input name="name" required autocomplete="off">
+      </label>
+      <label>
+        <span data-i18n="labelFilename">文件名 / 相对路径</span>
+        <input name="path" data-i18n-placeholder="labelFilenamePlaceholder" autocomplete="off">
+      </label>
+      <label>
+        <span data-i18n="labelTags">标签</span>
+        <input name="tags" data-i18n-placeholder="labelTagsPlaceholder" autocomplete="off">
+      </label>
+      <label>
+        <span data-i18n="labelCategory">分类</span>
+        <input name="category" data-i18n-placeholder="labelCategoryPlaceholder" autocomplete="off">
+      </label>
+      <label>
+        <span data-i18n="labelContent">内容</span>
+        <textarea name="content" rows="12" required></textarea>
+      </label>
+      <div class="dialog-actions">
+        <button id="btn-cancel" type="button" data-i18n="btnCancel">取消</button>
+        <button id="btn-save" type="submit" data-i18n="btnSave">保存</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="copy-dialog">
+    <form id="copy-form">
+      <p class="copy-hint" data-i18n="copyVarsHint">检测到变量占位，请填写后复制。</p>
+      <div id="copy-vars"></div>
+      <div class="dialog-actions">
+        <button id="btn-copy-cancel" type="button" data-i18n="btnCancel">取消</button>
+        <button id="btn-copy-raw" type="button" data-i18n="btnCopyRaw">原样复制</button>
+        <button id="btn-copy-fill" type="submit" data-i18n="btnCopyWithVars">填充并复制</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="sidepanel.js"></script>
+</body>
+</html>
